@@ -107,6 +107,16 @@ const copy = {
     contactBody: 'Schedule a private consultation or share what you are looking for, and Beaumont & Voss will help shape the next step with discretion, care, and clear advice.',
     bookConsultation: 'Book a Consultation',
     contactNote: 'Private contact details are shared after you click.',
+    footerBrandCopy: 'Private real estate advisory for discerning buyers, sellers, and investors seeking refined opportunities across Spain and Europe.',
+    footerContactTitle: 'Contact',
+    footerEmail: 'Email Beaumont & Voss',
+    footerCall: 'Call Beaumont & Voss',
+    footerLocation: 'Spain / Portugal / Remote',
+    footerLinksTitle: 'Links',
+    footerPrivateTitle: 'Private Office',
+    footerPrivate1: 'By-introduction advisory model',
+    footerPrivate2: 'Discreet search and negotiation support',
+    footerPrivate3: 'Multilingual communication for international clients',
     footerTagline: 'Boutique Real Estate Advisory'
   },
   es: {
@@ -210,6 +220,16 @@ const copy = {
     contactBody: 'Agende una consulta privada o comparta lo que busca y Beaumont & Voss le ayudara a definir el siguiente paso con discrecion, cuidado y criterio.',
     bookConsultation: 'Reservar una consulta',
     contactNote: 'Los datos de contacto privados se comparten tras hacer clic.',
+    footerBrandCopy: 'Asesoria inmobiliaria privada para compradores, vendedores e inversores exigentes que buscan oportunidades refinadas en Espana y Europa.',
+    footerContactTitle: 'Contacto',
+    footerEmail: 'Escribir a Beaumont & Voss',
+    footerCall: 'Llamar a Beaumont & Voss',
+    footerLocation: 'Espana / Portugal / Remoto',
+    footerLinksTitle: 'Enlaces',
+    footerPrivateTitle: 'Oficina Privada',
+    footerPrivate1: 'Modelo de asesoria por introduccion',
+    footerPrivate2: 'Busqueda discreta y apoyo en negociacion',
+    footerPrivate3: 'Comunicacion multilingue para clientes internacionales',
     footerTagline: 'Asesoria inmobiliaria boutique'
   }
 };

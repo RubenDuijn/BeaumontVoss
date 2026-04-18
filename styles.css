@@ -652,7 +652,7 @@ p {
     url("images/BV Modern Estate.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 24%;
+  background-position: center 72%;
 }
 
 .property-body {
@@ -740,16 +740,68 @@ p {
 }
 
 .site-footer {
-  padding: 1.5rem 0 2.2rem;
-  border-top: 1px solid rgba(221, 213, 203, 0.9);
+  margin-top: 1rem;
+  padding: 2.2rem 0 1.4rem;
+  border-top: 1px solid rgba(196, 170, 138, 0.5);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(166, 124, 82, 0.12) 0%, transparent 42%),
+    linear-gradient(135deg, #121519 0%, #191f26 100%);
+  color: #ece7df;
 }
 
-.footer-inner {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-grid h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.6rem;
+}
+
+.footer-grid h4 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d4c0a8;
+}
+
+.footer-grid p,
+.footer-grid li,
+.footer-bottom {
+  color: rgba(236, 231, 223, 0.82);
+  font-size: 0.92rem;
+}
+
+.footer-grid ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-grid li + li {
+  margin-top: 0.36rem;
+}
+
+.footer-grid a {
+  color: rgba(236, 231, 223, 0.92);
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  color: #f5d6ac;
+}
+
+.footer-bottom {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  color: var(--muted);
-  font-size: 0.92rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(236, 231, 223, 0.18);
 }
 
 @media (max-width: 920px) {
@@ -783,6 +835,10 @@ p {
 
   .property-media {
     height: 300px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -838,8 +894,17 @@ p {
     display: flex;
   }
 
-  .footer-inner {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .media-modern {
+    background-position: center 76%;
   }
 
   .property-media {
