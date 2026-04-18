@@ -106,7 +106,6 @@ const copy = {
     contactTitle: 'Your Next Exceptional Property Awaits',
     contactBody: 'Schedule a private consultation or share what you are looking for, and Beaumont & Voss will help shape the next step with discretion, care, and clear advice.',
     bookConsultation: 'Book a Consultation',
-    contactNote: 'Private contact details are shared after you click.',
     footerBrandCopy: 'Private real estate advisory for discerning buyers, sellers, and investors seeking refined opportunities across Spain and Europe.',
     footerContactTitle: 'Contact',
     footerEmail: 'Email Beaumont & Voss',
@@ -219,7 +218,6 @@ const copy = {
     contactTitle: 'Su proxima propiedad excepcional le espera',
     contactBody: 'Agende una consulta privada o comparta lo que busca y Beaumont & Voss le ayudara a definir el siguiente paso con discrecion, cuidado y criterio.',
     bookConsultation: 'Reservar una consulta',
-    contactNote: 'Los datos de contacto privados se comparten tras hacer clic.',
     footerBrandCopy: 'Asesoria inmobiliaria privada para compradores, vendedores e inversores exigentes que buscan oportunidades refinadas en Espana y Europa.',
     footerContactTitle: 'Contacto',
     footerEmail: 'Escribir a Beaumont & Voss',
@@ -296,9 +294,11 @@ tabs.forEach((tab) => {
 emailTriggers.forEach((button) => {
   const user = button.dataset.user;
   const domain = button.dataset.domain;
+  const subject = button.dataset.subject;
 
   if (user && domain) {
-    const mailto = `mailto:${user}@${domain}`;
+    const subjectQuery = subject ? `?subject=${encodeURIComponent(subject)}` : '';
+    const mailto = `mailto:${user}@${domain}${subjectQuery}`;
     button.setAttribute('href', mailto);
 
     button.addEventListener('click', () => {
