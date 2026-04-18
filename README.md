@@ -26,6 +26,11 @@ Starter static website for `Beaumont & Voss`.
 - Temporary email in live buttons: `RubenDuijn@gmail.com`
 - Reserved for later brand inbox: `hello@beaumontvoss.com`
 
+## Contact Details (Internal)
+- Email: `RubenDuijn@gmail.com`
+- Phone: `+41 79 397 21 32`
+- Phone visibility policy: hidden from public website for now
+
 ## Next likely steps
 - replace placeholder markets and contact details
 - add real photography / listings
