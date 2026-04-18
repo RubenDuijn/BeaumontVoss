@@ -73,6 +73,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  flex-wrap: nowrap;
 }
 
 .brand {
@@ -795,16 +796,26 @@ p {
   }
 
   .header-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 0.45rem;
   }
 
   .language-switch {
     order: 1;
+    margin: 0;
+    flex: 0 0 auto;
+    align-self: center;
   }
 
   .menu-toggle {
     display: inline-flex;
     order: 2;
+    margin: 0;
+    flex: 0 0 auto;
+    align-self: center;
   }
 
   .site-nav {
