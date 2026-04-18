@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beaumont & Voss | Boutique Real Estate Advisory</title>
   <meta name="description" content="Beaumont & Voss offers boutique real estate services with curated, high-end residences across Spain and Europe, delivered with discretion, multilingual guidance, and a refined personal approach." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,9 +23,9 @@
       </button>
 
       <nav id="site-nav" class="site-nav">
+        <a href="#advisory">About</a>
         <a href="#showcase">Portfolio</a>
         <a href="#selling">Services</a>
-        <a href="#advisory">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -31,7 +34,9 @@
   <main>
     <section class="cinema-hero" id="top">
       <div class="cinema-media" aria-hidden="true">
-        <img src="images/BV Modern Estate.png" alt="" />
+        <span class="cinema-slide slide-one"></span>
+        <span class="cinema-slide slide-two"></span>
+        <span class="cinema-slide slide-three"></span>
       </div>
       <div class="cinema-overlay" aria-hidden="true"></div>
       <div class="container cinema-content">
@@ -43,7 +48,24 @@
         </p>
         <div class="hero-actions">
           <a class="button" href="#showcase">Explore Our Portfolio</a>
-          <a class="button cinema-secondary" href="#contact">Request a Consultation</a>
+          <a class="button cinema-secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Request a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-bar" aria-label="Private advisory highlights">
+      <div class="container signal-grid">
+        <div class="signal-item">
+          <span>Private access</span>
+          <strong>Select off-market introductions</strong>
+        </div>
+        <div class="signal-item">
+          <span>Cross-border support</span>
+          <strong>Spain and Portugal transaction guidance</strong>
+        </div>
+        <div class="signal-item">
+          <span>Client profile</span>
+          <strong>Buyers, sellers, and family office advisors</strong>
         </div>
       </div>
     </section>
@@ -61,7 +83,7 @@
 
           <div class="hero-actions">
             <a class="button" href="#showcase">Explore Our Portfolio</a>
-            <a class="button secondary" href="#contact">Request a Consultation</a>
+            <a class="button secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Request a Consultation</a>
           </div>
 
           <div class="hero-metrics">
@@ -120,7 +142,7 @@
                 <option>€2m+</option>
               </select>
             </label>
-            <a class="button full" href="#contact">Curate my private selection</a>
+            <a class="button full" href="#showcase">Search matching estates</a>
             <p class="panel-note">We advise clients in English, German, Spanish, and Dutch.</p>
           </div>
         </aside>
@@ -167,7 +189,7 @@
           <article class="property-card">
             <div class="property-media media-city"></div>
             <div class="property-body">
-              <span class="property-tag">Salamanca</span>
+              <span class="property-tag">Salamanca, Spain</span>
               <h3>Elegant city apartment with historic character</h3>
               <p>For clients drawn to architecture, culture, and refined apartment living in one of Spain's most timeless settings.</p>
               <ul>
@@ -181,7 +203,7 @@
           <article class="property-card">
             <div class="property-media media-water"></div>
             <div class="property-body">
-              <span class="property-tag">Candelario</span>
+              <span class="property-tag">Candelario, Spain</span>
               <h3>Historic stone house in the centre of the village</h3>
               <p>A beautifully preserved residence in Candelario for buyers who value heritage architecture, timeless character, and a prime central setting.</p>
               <ul>
@@ -195,7 +217,7 @@
           <article class="property-card">
             <div class="property-media media-private"></div>
             <div class="property-body">
-              <span class="property-tag">Portugal Estate</span>
+              <span class="property-tag">Portugal</span>
               <h3>Historic estate in perfect condition</h3>
               <p>A distinguished estate in Portugal for buyers seeking heritage character, mature grounds, and move-in-ready quality.</p>
               <ul>
@@ -271,8 +293,8 @@
         </div>
 
         <div class="contact-actions">
-          <a class="button" href="mailto:hello@beaumontvoss.com">Book a Consultation</a>
-          <p class="contact-note">Or write directly to hello@beaumontvoss.com.</p>
+          <a class="button email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Book a Consultation</a>
+          <p class="contact-note">Private contact details are shared after you click.</p>
         </div>
       </div>
     </section>

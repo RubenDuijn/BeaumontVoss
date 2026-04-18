@@ -22,6 +22,10 @@ Starter static website for `Beaumont & Voss`.
 - `styles.css` — visual system and responsive layout
 - `script.js` — mobile menu and simple UI interactions
 
+## Contact Email Notes
+- Temporary email in live buttons: `RubenDuijn@gmail.com`
+- Reserved for later brand inbox: `hello@beaumontvoss.com`
+
 ## Next likely steps
 - replace placeholder markets and contact details
 - add real photography / listings

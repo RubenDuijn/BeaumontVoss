@@ -20,16 +20,24 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 118px;
+}
+
+#top {
+  scroll-margin-top: 0;
+}
+
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   letter-spacing: -0.02em;
   line-height: 1.08;
   margin: 0 0 0.75rem;
@@ -68,6 +76,8 @@ p {
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.03rem;
+  letter-spacing: 0.01em;
 }
 
 .brand-mark {
@@ -91,11 +101,31 @@ p {
 .site-nav a {
   color: #2c2722;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-dark);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
 }
 
 .site-nav a:hover {
   color: var(--accent-dark);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .menu-toggle {
@@ -134,13 +164,31 @@ p {
   inset: 0;
 }
 
-.cinema-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 54%;
-  transform: scale(1.08);
-  animation: heroPan 16s ease-out forwards;
+.cinema-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.06);
+  animation: heroSwap 24s infinite;
+}
+
+.slide-one {
+  background-image: url("images/BV Modern Estate.png");
+  animation-delay: 0s;
+}
+
+.slide-two {
+  background-image: url("images/BV Estate.png");
+  background-position: center 52%;
+  animation-delay: 8s;
+}
+
+.slide-three {
+  background-image: url("images/BV Historic Stone House.png");
+  background-position: center 54%;
+  animation-delay: 16s;
 }
 
 .cinema-overlay {
@@ -178,6 +226,41 @@ p {
   font-size: 1.06rem;
 }
 
+.signal-bar {
+  margin-top: -1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.signal-item {
+  background: rgba(255, 253, 250, 0.9);
+  border: 1px solid rgba(221, 213, 203, 0.94);
+  border-radius: 0.85rem;
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.signal-item span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-dark);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.signal-item strong {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 .cinema-secondary {
   background: transparent;
   border: 1px solid rgba(247, 243, 236, 0.72);
@@ -185,12 +268,37 @@ p {
   box-shadow: none;
 }
 
-@keyframes heroPan {
-  from {
-    transform: scale(1.1) translateY(-1.5%);
+@keyframes heroSwap {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
   }
-  to {
-    transform: scale(1) translateY(0);
+  7% {
+    opacity: 1;
+  }
+  27% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  33% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinema-slide {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+
+  .slide-one {
+    opacity: 1;
   }
 }
 
@@ -244,6 +352,7 @@ p {
   color: #fff;
   font-weight: 700;
   box-shadow: 0 12px 30px rgba(117, 85, 54, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
 }
 
 .button.secondary {
@@ -255,6 +364,17 @@ p {
 
 .button.full {
   width: 100%;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(117, 85, 54, 0.24);
+  filter: brightness(1.03);
+}
+
+.button.secondary:hover,
+.cinema-secondary:hover {
+  filter: none;
 }
 
 .panel-card .button.full {
@@ -390,6 +510,15 @@ p {
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 2px;
+  margin-top: 0.55rem;
+  background: linear-gradient(90deg, var(--accent-dark), rgba(166, 124, 82, 0));
+}
+
 .card-grid,
 .property-grid {
   display: grid;
@@ -402,6 +531,7 @@ p {
 
 .info-card {
   padding: 1.2rem;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
 .info-card p {
@@ -414,12 +544,24 @@ p {
 
 .property-card {
   overflow: hidden;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
 .property-media {
   height: 340px;
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.info-card:hover,
+.property-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(23, 20, 17, 0.12);
+}
+
+.property-card:hover .property-media {
+  transform: scale(1.02);
 }
 
 .media-city {
@@ -455,7 +597,7 @@ p {
     url("images/BV Modern Estate.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 50%;
+  background-position: center 38%;
 }
 
 .property-body {
@@ -558,6 +700,7 @@ p {
   }
 
   .hero-grid,
+  .signal-grid,
   .card-grid,
   .property-grid,
   .selling-grid,
