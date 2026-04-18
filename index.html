@@ -18,16 +18,23 @@
         <span>Beaumont &amp; Voss</span>
       </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-controls">
+        <nav id="site-nav" class="site-nav">
+          <a href="#advisory" data-i18n="navAbout">About</a>
+          <a href="#showcase" data-i18n="navPortfolio">Portfolio</a>
+          <a href="#selling" data-i18n="navServices">Services</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
 
-      <nav id="site-nav" class="site-nav">
-        <a href="#advisory">About</a>
-        <a href="#showcase">Portfolio</a>
-        <a href="#selling">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <div class="language-switch" role="group" aria-label="Language selector">
+          <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="es">ES</button>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -40,15 +47,15 @@
       </div>
       <div class="cinema-overlay" aria-hidden="true"></div>
       <div class="container cinema-content">
-        <p class="cinema-kicker">BOUTIQUE REAL ESTATE ADVISORY</p>
-        <h1>Exceptional Properties. Timeless Elegance.</h1>
-        <p>
+        <p class="cinema-kicker" data-i18n="cinemaKicker">BOUTIQUE REAL ESTATE ADVISORY</p>
+        <h1 data-i18n="cinemaTitle">Exceptional Properties. Timeless Elegance.</h1>
+        <p data-i18n="cinemaIntro">
           Discover curated residences and private opportunities across Spain and Europe,
           presented with discretion, market intelligence, and personal guidance.
         </p>
         <div class="hero-actions">
-          <a class="button" href="#showcase">Explore Our Portfolio</a>
-          <a class="button cinema-secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Request a Consultation</a>
+          <a class="button" href="#showcase" data-i18n="explorePortfolio">Explore Our Portfolio</a>
+          <a class="button cinema-secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com" data-i18n="requestConsultation">Request a Consultation</a>
         </div>
       </div>
     </section>
@@ -56,16 +63,16 @@
     <section class="signal-bar" aria-label="Private advisory highlights">
       <div class="container signal-grid">
         <div class="signal-item">
-          <span>Private access</span>
-          <strong>Select off-market introductions</strong>
+          <span data-i18n="signalAccessLabel">Private access</span>
+          <strong data-i18n="signalAccessValue">Select off-market introductions</strong>
         </div>
         <div class="signal-item">
-          <span>Cross-border support</span>
-          <strong>Spain and Portugal transaction guidance</strong>
+          <span data-i18n="signalCrossBorderLabel">Cross-border support</span>
+          <strong data-i18n="signalCrossBorderValue">Spain and Portugal transaction guidance</strong>
         </div>
         <div class="signal-item">
-          <span>Client profile</span>
-          <strong>Buyers, sellers, and family office advisors</strong>
+          <span data-i18n="signalClientLabel">Client profile</span>
+          <strong data-i18n="signalClientValue">Buyers, sellers, and family office advisors</strong>
         </div>
       </div>
     </section>
@@ -73,67 +80,67 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">BOUTIQUE REAL ESTATE ADVISORY</p>
-          <h1>Your Private Search, Designed Around You.</h1>
-          <p class="lead">
+          <p class="eyebrow" data-i18n="heroEyebrow">BOUTIQUE REAL ESTATE ADVISORY</p>
+          <h1 data-i18n="heroTitle">Your Private Search, Designed Around You.</h1>
+          <p class="lead" data-i18n="heroLead">
             Beaumont &amp; Voss delivers curated real estate guidance for buyers, sellers, and investors seeking
             distinctive residences across Spain and Europe. Our approach is discreet, personal, and shaped around
             trusted introductions, local insight, and well-judged opportunities.
           </p>
 
           <div class="hero-actions">
-            <a class="button" href="#showcase">Explore Our Portfolio</a>
-            <a class="button secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Request a Consultation</a>
+            <a class="button" href="#showcase" data-i18n="explorePortfolio">Explore Our Portfolio</a>
+            <a class="button secondary email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com" data-i18n="requestConsultation">Request a Consultation</a>
           </div>
 
           <div class="hero-metrics">
             <div>
-              <strong>Curated selection</strong>
-              <span>Hand-picked homes, second residences, and selective off-market possibilities</span>
+              <strong data-i18n="metricCuratedLabel">Curated selection</strong>
+              <span data-i18n="metricCuratedValue">Hand-picked homes, second residences, and selective off-market possibilities</span>
             </div>
             <div>
-              <strong>Discreet service</strong>
-              <span>Private, expert guidance from first brief to final negotiation</span>
+              <strong data-i18n="metricDiscreetLabel">Discreet service</strong>
+              <span data-i18n="metricDiscreetValue">Private, expert guidance from first brief to final negotiation</span>
             </div>
             <div>
-              <strong>English · German · Spanish · Dutch</strong>
-              <span>Multilingual advice that keeps international conversations natural and clear</span>
+              <strong data-i18n="metricLanguagesLabel">English · German · Spanish · Dutch</strong>
+              <span data-i18n="metricLanguagesValue">Multilingual advice that keeps international conversations natural and clear</span>
             </div>
           </div>
         </div>
 
         <aside class="hero-panel">
           <div class="hero-tabs" aria-label="Search mode">
-            <button class="tab is-active" data-mode="buy" type="button">Buy</button>
-            <button class="tab" data-mode="sell" type="button">Sell</button>
-            <button class="tab" data-mode="invest" type="button">Invest</button>
+            <button class="tab is-active" data-mode="buy" type="button" data-i18n="tabBuy">Buy</button>
+            <button class="tab" data-mode="sell" type="button" data-i18n="tabSell">Sell</button>
+            <button class="tab" data-mode="invest" type="button" data-i18n="tabInvest">Invest</button>
           </div>
 
           <div class="panel-card">
-            <h2>Tell us your brief</h2>
+            <h2 data-i18n="panelTitle">Tell us your brief</h2>
             <label>
-              Preferred region
+              <span data-i18n="labelRegion">Preferred region</span>
               <select>
-                <option>All regions</option>
-                <option>Spain</option>
-                <option>Portugal</option>
+                <option data-i18n="optAllRegions">All regions</option>
+                <option data-i18n="optSpain">Spain</option>
+                <option data-i18n="optPortugal">Portugal</option>
               </select>
             </label>
             <label>
-              Property style
+              <span data-i18n="labelStyle">Property style</span>
               <select>
-                <option>All styles</option>
-                <option>City apartment</option>
-                <option>Townhouse</option>
-                <option>Villa</option>
-                <option>Country estate</option>
-                <option>Second home</option>
+                <option data-i18n="optAllStyles">All styles</option>
+                <option data-i18n="optCityApartment">City apartment</option>
+                <option data-i18n="optTownhouse">Townhouse</option>
+                <option data-i18n="optVilla">Villa</option>
+                <option data-i18n="optCountryEstate">Country estate</option>
+                <option data-i18n="optSecondHome">Second home</option>
               </select>
             </label>
             <label>
-              Guide budget
+              <span data-i18n="labelBudget">Guide budget</span>
               <select>
-                <option>All budgets</option>
+                <option data-i18n="optAllBudgets">All budgets</option>
                 <option>&lt; €250k</option>
                 <option>€250k – €500k</option>
                 <option>€500k – €750k</option>
@@ -142,8 +149,8 @@
                 <option>€2m+</option>
               </select>
             </label>
-            <a class="button full" href="#showcase">Search matching estates</a>
-            <p class="panel-note">We advise clients in English, German, Spanish, and Dutch.</p>
+            <a class="button full" href="#showcase" data-i18n="searchEstates">Search matching estates</a>
+            <p class="panel-note" data-i18n="panelNote">We advise clients in English, German, Spanish, and Dutch.</p>
           </div>
         </aside>
       </div>
@@ -152,9 +159,9 @@
     <section class="section" id="advisory">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">THE BEAUMONT &amp; VOSS DIFFERENCE</p>
-          <h2>Luxury Meets Expertise</h2>
-          <p>
+          <p class="eyebrow" data-i18n="advisoryEyebrow">THE BEAUMONT &amp; VOSS DIFFERENCE</p>
+          <h2 data-i18n="advisoryTitle">Luxury Meets Expertise</h2>
+          <p data-i18n="advisoryIntro">
             We combine market knowledge, trusted local relationships, and a refined personal approach to help discerning
             clients move towards the right property with more confidence and less noise.
           </p>
@@ -162,16 +169,16 @@
 
         <div class="card-grid">
           <article class="info-card">
-            <h3>Curated Selection</h3>
-            <p>Only carefully chosen properties and introductions that genuinely fit the brief, the lifestyle, and the ambition.</p>
+            <h3 data-i18n="infoCuratedTitle">Curated Selection</h3>
+            <p data-i18n="infoCuratedBody">Only carefully chosen properties and introductions that genuinely fit the brief, the lifestyle, and the ambition.</p>
           </article>
           <article class="info-card">
-            <h3>Discreet Service</h3>
-            <p>Privacy, professionalism, and personal attention at every step, from early search through to negotiation.</p>
+            <h3 data-i18n="infoDiscreetTitle">Discreet Service</h3>
+            <p data-i18n="infoDiscreetBody">Privacy, professionalism, and personal attention at every step, from early search through to negotiation.</p>
           </article>
           <article class="info-card">
-            <h3>Expert Guidance</h3>
-            <p>Deep market understanding, strong local contacts, and multilingual support in English, German, Spanish, and Dutch.</p>
+            <h3 data-i18n="infoExpertTitle">Expert Guidance</h3>
+            <p data-i18n="infoExpertBody">Deep market understanding, strong local contacts, and multilingual support in English, German, Spanish, and Dutch.</p>
           </article>
         </div>
       </div>
@@ -180,23 +187,23 @@
     <section class="section section-alt" id="showcase">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">FEATURED PROPERTIES</p>
-          <h2>Our Portfolio</h2>
-          <span class="status-pill">Illustrative portfolio</span>
-          <p>Illustrative examples of the kind of opportunities Beaumont &amp; Voss can present for lifestyle-led and investment-minded buyers.</p>
+          <p class="eyebrow" data-i18n="showcaseEyebrow">FEATURED PROPERTIES</p>
+          <h2 data-i18n="showcaseTitle">Our Portfolio</h2>
+          <span class="status-pill" data-i18n="showcasePill">Illustrative portfolio</span>
+          <p data-i18n="showcaseIntro">Illustrative examples of the kind of opportunities Beaumont &amp; Voss can present for lifestyle-led and investment-minded buyers.</p>
         </div>
 
         <div class="property-grid">
           <article class="property-card">
             <div class="property-media media-city"></div>
             <div class="property-body">
-              <span class="property-tag">Salamanca, Spain</span>
-              <h3>Grand city apartment with historic character</h3>
-              <p>For clients seeking architecture, culture, and refined apartment living in one of Spain's timeless settings.</p>
+              <span class="property-tag" data-i18n="cityTag">Salamanca, Spain</span>
+              <h3 data-i18n="cityTitle">Grand city apartment with historic character</h3>
+              <p data-i18n="cityBody">For clients seeking architecture, culture, and refined apartment living in one of Spain's timeless settings.</p>
               <ul>
-                <li>Historic centre atmosphere</li>
-                <li>Approx. 180-240 m² potential</li>
-                <li>Guide price: €1.25M</li>
+                <li data-i18n="cityList1">Historic centre atmosphere</li>
+                <li data-i18n="cityList2">Approx. 180-240 m² potential</li>
+                <li data-i18n="cityList3">Guide price: €1.25M</li>
               </ul>
             </div>
           </article>
@@ -204,13 +211,13 @@
           <article class="property-card">
             <div class="property-media media-water"></div>
             <div class="property-body">
-              <span class="property-tag">Candelario, Spain</span>
-              <h3>Historic stone residence in the village centre</h3>
-              <p>A beautifully preserved home for buyers who value heritage architecture, timeless character, and a prime central address.</p>
+              <span class="property-tag" data-i18n="stoneTag">Candelario, Spain</span>
+              <h3 data-i18n="stoneTitle">Historic stone residence in the village centre</h3>
+              <p data-i18n="stoneBody">A beautifully preserved home for buyers who value heritage architecture, timeless character, and a prime central address.</p>
               <ul>
-                <li>Traditional stone facade and period details</li>
-                <li>Walkable village-centre address</li>
-                <li>Guide price: €890k</li>
+                <li data-i18n="stoneList1">Traditional stone facade and period details</li>
+                <li data-i18n="stoneList2">Walkable village-centre address</li>
+                <li data-i18n="stoneList3">Guide price: €890k</li>
               </ul>
             </div>
           </article>
@@ -218,13 +225,13 @@
           <article class="property-card">
             <div class="property-media media-private"></div>
             <div class="property-body">
-              <span class="property-tag">Portugal</span>
-              <h3>Historic estate in perfect condition</h3>
-              <p>A distinguished estate for buyers seeking heritage character, mature grounds, and move-in-ready quality.</p>
+              <span class="property-tag" data-i18n="estateTag">Portugal</span>
+              <h3 data-i18n="estateTitle">Historic estate in perfect condition</h3>
+              <p data-i18n="estateBody">A distinguished estate for buyers seeking heritage character, mature grounds, and move-in-ready quality.</p>
               <ul>
-                <li>Period architecture with refined restoration</li>
-                <li>Elegant reception rooms and private outdoor terraces</li>
-                <li>Guide price: €3.2M</li>
+                <li data-i18n="estateList1">Period architecture with refined restoration</li>
+                <li data-i18n="estateList2">Elegant reception rooms and private outdoor terraces</li>
+                <li data-i18n="estateList3">Guide price: €3.2M</li>
               </ul>
             </div>
           </article>
@@ -232,13 +239,13 @@
           <article class="property-card">
             <div class="property-media media-modern"></div>
             <div class="property-body">
-              <span class="property-tag">Villamayor, Spain</span>
-              <h3>Contemporary golf-front estate</h3>
-              <p>A striking modern home overlooking the fairways, designed for buyers who value architecture, privacy, and turnkey comfort.</p>
+              <span class="property-tag" data-i18n="modernTag">Villamayor, Spain</span>
+              <h3 data-i18n="modernTitle">Contemporary golf-front estate</h3>
+              <p data-i18n="modernBody">A striking modern home overlooking the fairways, designed for buyers who value architecture, privacy, and turnkey comfort.</p>
               <ul>
-                <li>Direct golf-front setting with panoramic greenside views</li>
-                <li>Clean-lined interiors with premium finishes throughout</li>
-                <li>Guide price: €1.45M</li>
+                <li data-i18n="modernList1">Direct golf-front setting with panoramic greenside views</li>
+                <li data-i18n="modernList2">Clean-lined interiors with premium finishes throughout</li>
+                <li data-i18n="modernList3">Guide price: €1.45M</li>
               </ul>
             </div>
           </article>
@@ -249,16 +256,16 @@
     <section class="section" id="markets">
       <div class="container market-wrap">
         <div>
-          <p class="eyebrow">WHAT WE LOOK FOR</p>
-          <h2>The right opportunity matters more than one fixed geography.</h2>
+          <p class="eyebrow" data-i18n="marketsEyebrow">WHAT WE LOOK FOR</p>
+          <h2 data-i18n="marketsTitle">The right opportunity matters more than one fixed geography.</h2>
         </div>
         <div class="market-list">
-          <span>City residences</span>
-          <span>Country estates</span>
-          <span>Coastal homes</span>
-          <span>Second residences</span>
-          <span>Investment opportunities</span>
-          <span>Off-market mandates</span>
+          <span data-i18n="market1">City residences</span>
+          <span data-i18n="market2">Country estates</span>
+          <span data-i18n="market3">Coastal homes</span>
+          <span data-i18n="market4">Second residences</span>
+          <span data-i18n="market5">Investment opportunities</span>
+          <span data-i18n="market6">Off-market mandates</span>
         </div>
       </div>
     </section>
@@ -266,19 +273,19 @@
     <section class="section section-dark" id="selling">
       <div class="container selling-grid">
         <div>
-          <p class="eyebrow">SERVICES</p>
-          <h2>Tailored Services for Discerning Clients</h2>
-          <p>
+          <p class="eyebrow" data-i18n="servicesEyebrow">SERVICES</p>
+          <h2 data-i18n="servicesTitle">Tailored Services for Discerning Clients</h2>
+          <p data-i18n="servicesBody">
             From acquisition support to strategic sales representation, Beaumont &amp; Voss is designed to offer calm,
             highly personal guidance for important property decisions.
           </p>
         </div>
 
         <div class="steps">
-          <div class="step"><strong>01</strong><span>Property Acquisition</span></div>
-          <div class="step"><strong>02</strong><span>Property Sales</span></div>
-          <div class="step"><strong>03</strong><span>Consultation &amp; Investment</span></div>
-          <div class="step"><strong>04</strong><span>Lifestyle Advisory</span></div>
+          <div class="step"><strong>01</strong><span data-i18n="step1">Property Acquisition</span></div>
+          <div class="step"><strong>02</strong><span data-i18n="step2">Property Sales</span></div>
+          <div class="step"><strong>03</strong><span data-i18n="step3">Consultation &amp; Investment</span></div>
+          <div class="step"><strong>04</strong><span data-i18n="step4">Lifestyle Advisory</span></div>
         </div>
       </div>
     </section>
@@ -286,16 +293,16 @@
     <section class="section" id="contact">
       <div class="container contact-card">
         <div>
-          <p class="eyebrow">NEXT STEP</p>
-          <h2>Your Next Exceptional Property Awaits</h2>
-          <p>
+          <p class="eyebrow" data-i18n="contactEyebrow">NEXT STEP</p>
+          <h2 data-i18n="contactTitle">Your Next Exceptional Property Awaits</h2>
+          <p data-i18n="contactBody">
             Schedule a private consultation or share what you are looking for, and Beaumont &amp; Voss will help shape the next step with discretion, care, and clear advice.
           </p>
         </div>
 
         <div class="contact-actions">
-          <a class="button email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com">Book a Consultation</a>
-          <p class="contact-note">Private contact details are shared after you click.</p>
+          <a class="button email-trigger" href="#" data-user="RubenDuijn" data-domain="gmail.com" data-i18n="bookConsultation">Book a Consultation</a>
+          <p class="contact-note" data-i18n="contactNote">Private contact details are shared after you click.</p>
         </div>
       </div>
     </section>
@@ -304,7 +311,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Beaumont &amp; Voss</span>
-      <span>Boutique Real Estate Advisory</span>
+      <span data-i18n="footerTagline">Boutique Real Estate Advisory</span>
     </div>
   </footer>
 

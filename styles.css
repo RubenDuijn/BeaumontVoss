@@ -69,6 +69,12 @@ p {
   min-height: 76px;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -96,6 +102,35 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.18rem;
+  border-radius: 999px;
+  background: #efe8de;
+  border: 1px solid rgba(221, 213, 203, 0.9);
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: #49433d;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.34rem 0.54rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-btn.is-active {
+  background: #fff;
+  color: #181512;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 .site-nav a {
@@ -616,7 +651,7 @@ p {
     url("images/BV Modern Estate.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 38%;
+  background-position: center 24%;
 }
 
 .property-body {
@@ -759,8 +794,17 @@ p {
     font-size: clamp(2rem, 9vw, 2.8rem);
   }
 
+  .header-controls {
+    gap: 0.45rem;
+  }
+
+  .language-switch {
+    order: 1;
+  }
+
   .menu-toggle {
     display: inline-flex;
+    order: 2;
   }
 
   .site-nav {
@@ -776,6 +820,7 @@ p {
     border: 1px solid var(--line);
     border-radius: 1rem;
     box-shadow: var(--shadow);
+    order: 3;
   }
 
   .site-nav.is-open {
