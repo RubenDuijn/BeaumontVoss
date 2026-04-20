@@ -903,6 +903,15 @@ p {
     align-items: flex-start;
   }
 
+  @media (max-width: 1200px) {
+    .market-wrap {
+      grid-template-columns: 1fr;
+    }
+    .market-list {
+      justify-content: flex-start;
+    }
+  }
+
   .media-modern {
     background-position: center 76%;
   }
